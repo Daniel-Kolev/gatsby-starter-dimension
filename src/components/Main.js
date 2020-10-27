@@ -33,7 +33,7 @@ class Main extends React.Component {
             <img src={pic01} alt="" />
           </span>
           <p>
-            Test change
+            Test change test
             By the way, check out my <a href="#work">awesome work</a>.
           </p>
           <p>
