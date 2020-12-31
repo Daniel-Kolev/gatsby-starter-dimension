@@ -10,13 +10,13 @@ import '../assets/scss/main.scss'
 
 const Layout = ({ children, isHomePage = false, location }) => {
   const hasWindow = typeof window !== 'undefined'
-  const [loading, setLoading] = useState(hasWindow && typeof window?.firstHistoryKey === 'undefined' ? 'is-loading' : '');
+  const [loading, setLoading] = useState(hasWindow && typeof window.firstHistoryKey === 'undefined' ? 'is-loading' : '');
 
   useEffect(() => {
-    if (hasWindow && !window?.firstHistoryKey) {
+    if (hasWindow && !window.firstHistoryKey) {
       window.firstHistoryKey = location.key
     }
-    const isLoading = hasWindow && window?.firstHistoryKey === location.key
+    const isLoading = hasWindow && window.firstHistoryKey === location.key
     let timeoutId = 0
     
     if (isLoading) {
@@ -24,7 +24,6 @@ const Layout = ({ children, isHomePage = false, location }) => {
         setLoading('')
       }, 100);
     }
-    console.log('didmount of Layout', isLoading)
     return () => {
       if (timeoutId) {
         clearTimeout(timeoutId);
