@@ -9,13 +9,14 @@ import Footer from './Footer'
 import '../assets/scss/main.scss'
 
 const Layout = ({ children, isHomePage = false, location }) => {
-  const [loading, setLoading] = useState(typeof window?.firstHistoryKey === 'undefined' ? 'is-loading' : '');
+  const hasWindow = typeof window !== 'undefined'
+  const [loading, setLoading] = useState(hasWindow && typeof window?.firstHistoryKey === 'undefined' ? 'is-loading' : '');
 
   useEffect(() => {
-    if (window && !window?.firstHistoryKey) {
+    if (hasWindow && !window?.firstHistoryKey) {
       window.firstHistoryKey = location.key
     }
-    const isLoading = window?.firstHistoryKey === location.key
+    const isLoading = hasWindow && window?.firstHistoryKey === location.key
     let timeoutId = 0
     
     if (isLoading) {
