@@ -1,25 +1,21 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from 'gatsby'
+import Icon from './Icon/Icon'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-    <div className="logo">
-      <span className="icon fa-paint-brush"></span>
-    </div>
+    <Icon icon='paint-brush' />
     <nav>
       <ul>
         <li>
-          <Link to="/" state={{ fromHeader: true }}><button>Home</button></Link>
+          <Link to="/"><button>За мен</button></Link>
         </li>
         <li>
-          <Link to="/work"><button>Work</button></Link>
+          <Link to="/work"><button>Картини</button></Link>
         </li>
         <li>
-          <Link to="/about"><button>About</button></Link>
-        </li>
-        <li>
-          <Link to="/contact"><button>Contact</button></Link>
+          <Link to="/contact"><button>Контакти</button></Link>
         </li>
       </ul>
     </nav>

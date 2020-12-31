@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -8,7 +8,29 @@ import Footer from './Footer'
 
 import '../assets/scss/main.scss'
 
-const Layout = ({ children, isHomePage = false, location, loading = '' }) => {
+const Layout = ({ children, isHomePage = false, location }) => {
+  const [loading, setLoading] = useState(typeof window.firstHistoryKey === 'undefined' ? 'is-loading' : '');
+
+  useEffect(() => {
+    if (!window.firstHistoryKey) {
+      window.firstHistoryKey = location.key
+    }
+    const isLoading = window.firstHistoryKey === location.key
+    let timeoutId = 0
+    
+    if (isLoading) {
+      timeoutId = setTimeout(() => {
+        setLoading('')
+      }, 100);
+    }
+    console.log('didmount of Layout', isLoading)
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    }
+  }, [])
+ 
   return (
     <StaticQuery
       query={graphql`
@@ -34,7 +56,9 @@ const Layout = ({ children, isHomePage = false, location, loading = '' }) => {
           <div className={`body ${loading}`}>
             <div id="wrapper">
               <Header isHomePage={isHomePage} timeout={false} />
-                {children}
+                <div className='content'>
+                  {children}
+                </div>
               <Footer timeout={false} />
             </div>
             <div id="bg"></div>

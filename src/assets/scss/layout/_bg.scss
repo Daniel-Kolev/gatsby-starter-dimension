@@ -61,6 +61,12 @@
     z-index: 1;
   }
 
+  @include breakpoint(xsmall) {
+    &:after {
+      background-position: 44%;;
+    }
+  }
+  
   .body.is-loading & {
     &:before {
       background-color: _palette(bg-alt);
