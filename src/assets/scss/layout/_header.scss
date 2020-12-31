@@ -62,20 +62,6 @@
     }
   }
 
-  .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
-    border: solid _size(border-width) _palette(border);
-    border-radius: 100%;
-
-    .icon {
-      &:before {
-        font-size: 2rem;
-      }
-    }
-  }
-
   nav {
     ul {
       @include vendor('display', 'flex');
@@ -94,6 +80,7 @@
         }
 
         button {
+          background-color: rgba(0, 0, 0, 0.2);
           display: block;
           min-width: 7.5rem;
           height: 2.75rem;
@@ -154,18 +141,6 @@
       &:before {
         top: calc(-2rem - 1px);
         height: calc(2rem + 1px);
-      }
-    }
-
-    .logo {
-      width: 4.75rem;
-      height: 4.75rem;
-      line-height: 4.75rem;
-
-      .icon {
-        &:before {
-          font-size: 1.75rem;
-        }
       }
     }
   }

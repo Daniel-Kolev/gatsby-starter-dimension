@@ -1,9 +1,16 @@
 
   .content {
-    border-style: solid;
-    border-color: _palette(border);
-    border-top-width: _size(border-width);
-    border-bottom-width: _size(border-width);
+    text-align: center;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    // border-style: solid;
+    // border-color: _palette(border);
+    // border-top-width: _size(border-width);
+    // border-bottom-width: _size(border-width);
     max-width: 100%;
 
     .inner {
@@ -20,6 +27,10 @@
       max-height: 40rem;
       overflow: hidden;
       
+      &-text {
+        text-align: center;
+      }
+
       &-text :last-child {
         margin-bottom: 0;
       }

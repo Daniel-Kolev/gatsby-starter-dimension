@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
 import ImageList from '../components/ImageList/ImageList'
 const Home = ({location}) => {
+    useEffect(() => {
+        // fetch('https://graph.instagram.com/me/media?access_token=IGQVJVVm15MDJKVDVRZAFBBUDI5NUc1bDFibDJWaHVNc1FBUkJqWS1MSlEyVDRGNEYyOXVsQ0x3T0pMckR2MC1EeGllQXlwLVM1NDFIM1IzUmladVplT3Fhdng5LXVHX0ZA2Y2hPOUFPS1NQVUdnbEZAQMAZDZD&fields=media_url,permalink,caption,media_type,children{id,media_url,permalink}', {
+        //     method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        //     mode: 'cors', // no-cors, *cors, same-origin
+        //     headers: {
+        //       'Content-Type': 'application/json'
+        //     },
+        //     redirect: 'follow', // manual, *follow, error
+        //     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        //   })
+        //     .then(response => response.json())
+        //     .then(data => console.log(data))
+
+        /*
+        fix homepage
+        fix contact page
+        fix about page
+        fix background
+        - video
+        fix work page
+        - filters
+        */
+    }, [])
   const response = {
     "data": [
         {

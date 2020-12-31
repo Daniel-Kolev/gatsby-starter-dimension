@@ -110,18 +110,53 @@
 		}
 	}
 
-	
-		/* width */
-		::-webkit-scrollbar {
-			width: 10px;
-		}
-		
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: rgba(0, 0, 0, 0.3);
-			border-radius: 10px;
-		}
 
-		body {
-			overflow: overlay;
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+
+	body {
+		overflow: overlay;
+	}
+
+
+
+.logo {
+	text-align: center;
+	width: 5.5rem;
+	height: 5.5rem;
+	line-height: 5.5rem;
+	border: solid _size(border-width) _palette(border);
+	border-radius: 100%;
+	
+
+	.icon {
+		&:before {
+		font-size: 2rem;
 		}
+	}
+	}
+.logo.clickable {
+	cursor: pointer;
+}
+	  
+  @include breakpoint(small) {
+    .logo {
+      width: 4.75rem;
+      height: 4.75rem;
+      line-height: 4.75rem;
+
+      .icon {
+        &:before {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
