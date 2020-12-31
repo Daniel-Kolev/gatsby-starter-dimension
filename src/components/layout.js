@@ -3,28 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Header from './Header'
+import Footer from './Footer'
+
 import '../assets/scss/main.scss'
 
-const Layout = ({ children, location }) => {
-
-  let content;
-
-  if (location && location.pathname === '/') {
-    content = (
-      <div>
-        {children}
-      </div>
-    )
-  } else {
-    content = (
-      <div id="wrapper" className="page">
-        <div>
-          {children}
-        </div>
-      </div>
-    )
-  }
-
+const Layout = ({ children, isHomePage = false, location, loading = '' }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -47,7 +31,14 @@ const Layout = ({ children, location }) => {
           >
             <html lang="en" />
           </Helmet>
-          {content}
+          <div className={`body ${loading}`}>
+            <div id="wrapper">
+              <Header isHomePage={isHomePage} timeout={false} />
+                {children}
+              <Footer timeout={false} />
+            </div>
+            <div id="bg"></div>
+          </div>
         </>
       )}
     />

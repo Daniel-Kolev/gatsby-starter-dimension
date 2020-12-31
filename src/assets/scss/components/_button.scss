@@ -32,6 +32,12 @@
 		text-transform: uppercase;
 		white-space: nowrap;
 
+		& {
+			a {
+				border-bottom: none
+			}
+		}
+		
 		&:hover {
 			background-color: _palette(border-bg);
 		}

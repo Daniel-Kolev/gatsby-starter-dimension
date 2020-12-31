@@ -41,3 +41,25 @@
 		border-bg:					rgba(255,255,255,0.075),
 		border-bg-alt:				rgba(255,255,255,0.175)
 	);
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+	$deviceBreakpoints: (
+		'mobile':
+		'(max-width: 599px) and (orientation: portrait), (max-width: 896px) and (orientation: landscape)',
+		'desktop':
+		'(min-width: 600px) and (orientation: portrait), (min-width: 897px) and (orientation: landscape)',
+	) !default;
+	
+	$orientationBreakpoints: (
+		'portrait': (
+		'mobile': 599px,
+		'non-mobile': 600px,
+		),
+		'landscape': (
+		'mobile': 896px,
+		'non-mobile': 897px,
+		),
+	) !default;
+	

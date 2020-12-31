@@ -87,7 +87,7 @@
 			}
 
 		}
-
+		
 		@include breakpoint(small) {
 			article {
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
@@ -109,3 +109,19 @@
 			}
 		}
 	}
+
+	
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+		}
+
+		body {
+			overflow: overlay;
+		}

@@ -396,3 +396,19 @@
 		}
 
 }
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $deviceBreakpoints
+@mixin respond-to($breakpoint) {
+	@if map-has-key($deviceBreakpoints, $breakpoint) {
+	  $query: map-get($deviceBreakpoints, $breakpoint);
+	  @media only screen and #{$query} {
+		@content;
+	  }
+	} @else {
+	  @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Available breakpoints are: #{map-keys($deviceBreakpoints)}.";
+	}
+  }
+  
