@@ -39,8 +39,6 @@
 	@import 'components/list';
 	@import 'components/table';
 	@import 'components/button';
-	@import 'components/Image/image';
-	@import 'components/ImageList/imageList';
 
 // Layout.
 
@@ -52,4 +50,5 @@
 
 // Pages
 
-	@import 'pages/index'
+	@import 'pages/index';
+	@import 'pages/work';
