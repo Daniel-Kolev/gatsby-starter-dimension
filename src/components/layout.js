@@ -9,13 +9,13 @@ import Footer from './Footer'
 import '../assets/scss/main.scss'
 
 const Layout = ({ children, isHomePage = false, location }) => {
-  const [loading, setLoading] = useState(typeof window.firstHistoryKey === 'undefined' ? 'is-loading' : '');
+  const [loading, setLoading] = useState(typeof window?.firstHistoryKey === 'undefined' ? 'is-loading' : '');
 
   useEffect(() => {
-    if (!window.firstHistoryKey) {
+    if (window && !window?.firstHistoryKey) {
       window.firstHistoryKey = location.key
     }
-    const isLoading = window.firstHistoryKey === location.key
+    const isLoading = window?.firstHistoryKey === location.key
     let timeoutId = 0
     
     if (isLoading) {
@@ -47,8 +47,8 @@ const Layout = ({ children, isHomePage = false, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: 'Ani\'s digital gallery' },
+              { name: 'keywords', content: 'aniart96, aniart, gallery, art, art site' },
             ]}
           >
             <html lang="en" />
