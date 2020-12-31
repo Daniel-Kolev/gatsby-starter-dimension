@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
+    console.log('location',props.location.state)
     this.state = {
       loading: props.location?.state?.fromHeader ? '' : 'is-loading'
     }
