@@ -10,7 +10,7 @@ import '../assets/scss/main.scss'
 
 const Layout = ({ children, isHomePage = false, location }) => {
   const hasWindow = typeof window !== 'undefined'
-  const shouldBeLoading = (hasWindow && typeof window.firstHistoryKey === 'undefined' || !hasWindow))
+  const shouldBeLoading = (hasWindow && typeof window.firstHistoryKey === 'undefined') || !hasWindow
   const [loading, setLoading] = useState(shouldBeLoading ? 'is-loading' : '');
 
   useEffect(() => {
