@@ -24,7 +24,6 @@ const Layout = ({ children, isHomePage = false, location }) => {
         setLoading('')
       }, 100);
     }
-    console.log('didmount of Layout', isLoading)
     return () => {
       if (timeoutId) {
         clearTimeout(timeoutId);
