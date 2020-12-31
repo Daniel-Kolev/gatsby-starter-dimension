@@ -76,40 +76,6 @@
     }
   }
 
-  .content {
-    border-style: solid;
-    border-color: _palette(border);
-    border-top-width: _size(border-width);
-    border-bottom-width: _size(border-width);
-    max-width: 100%;
-
-    .inner {
-      @include vendor(
-        'transition',
-        (
-          'max-height #{_duration(intro)} ease',
-          'padding #{_duration(intro)} ease',
-          'opacity #{_duration(article)} ease-in-out'
-        )
-      );
-      @include vendor('transition-delay', '0.25s');
-      padding: 3rem 2rem;
-      max-height: 40rem;
-      overflow: hidden;
-
-      > :last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    p {
-      text-transform: uppercase;
-      letter-spacing: _font(letter-spacing);
-      font-size: 0.8rem;
-      line-height: 2;
-    }
-  }
-
   nav {
     ul {
       @include vendor('display', 'flex');
@@ -132,7 +98,8 @@
           min-width: 7.5rem;
           height: 2.75rem;
           line-height: 2.75rem;
-          padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+          padding: 0;
+          width: 100%;
           text-transform: uppercase;
           letter-spacing: _font(letter-spacing);
           font-size: 0.8rem;
@@ -174,36 +141,9 @@
     }
   }
 
-  .body.is-article-visible & {
-    @include vendor('transform', 'scale(0.95)');
-    // @include vendor('filter', 'blur(0.1rem)');
-    opacity: 0;
-  }
-
   .body.is-loading & {
     > * {
       opacity: 0;
-    }
-
-    // @include vendor('filter', 'blur(0.125rem)');
-
-    .content {
-      .inner {
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        opacity: 0;
-      }
-    }
-  }
-
-  @include breakpoint(medium) {
-    .content {
-      p {
-        br {
-          display: none;
-        }
-      }
     }
   }
 
@@ -228,26 +168,10 @@
         }
       }
     }
-
-    .content {
-      .inner {
-        padding: 2.5rem 1rem;
-      }
-
-      p {
-        line-height: 1.875;
-      }
-    }
   }
 
   @include breakpoint(xsmall) {
     padding: 1.5rem 0;
-
-    .content {
-      .inner {
-        padding: 2.5rem 0;
-      }
-    }
 
     nav {
       ul {
