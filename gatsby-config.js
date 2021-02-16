@@ -1,8 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ani\'s gallery',
-    author: 'Daniel Kolev',
-    description: 'The virtual gallery of Yoana (Ani) where she displays her art',
+    title: 'Галерията на Ани',
+    author: 'Даниел Колев',
+    description: 'Виртуалната галерия на Ани',
+    keywords: 'aniart96, aniart, gallery, art, art site, ani gallery, ани картини, картини, рисунки, рисунките на ани, галерията на ани, картините на ани, поръчка на картини, поръчка на рисунки, картини по поръчка, рисунки по поръчка, поръчка',
+    url: "https://ani.gallery/",
+    image: "https://scontent.cdninstagram.com/v/t51.2885-15/106228560_574947930119402_914765535774726612_n.jpg?_nc_cat=102&ccb=3&_nc_sid=8ae9d6&_nc_ohc=gtnYTdnyoikAX8ZdAJl&_nc_ht=scontent.cdninstagram.com&oh=c676919058a95039739e99ac815b159a&oe=604E8652",
+    "menuLinks": [
+      {
+        "name": "За мен",
+        "description": "Аз съм Ани и обичам да рисувам.",
+        "link": "/"
+      },
+      {
+        "name": "Картини",
+        "description": "Разгледайте моите картини",
+        "link": "/paintings"
+      },
+      {
+        "name": "Поръчки",
+        "description": "Поръчайте вашата мечтана картина!",
+        "link": "/orders"
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',

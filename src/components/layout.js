@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import SEO from './seo'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
@@ -31,32 +31,32 @@ const Layout = ({ children, isHomePage = false, location }) => {
       }
     }
   }, [])
- 
+
   return (
     <StaticQuery
       query={graphql`
         query SiteTitleQuery {
           site {
             siteMetadata {
-              title
+              defaultTitle: title
+              defaultDescription: description
+              siteUrl: url
+              defaultImage: image
+              defaultKeywords: keywords
+              menuLinks {
+                name
+                link
+              }
             }
           }
         }
       `}
       render={data => (
         <>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Ani\'s digital gallery' },
-              { name: 'keywords', content: 'aniart96, aniart, gallery, art, art site' },
-            ]}
-          >
-            <html lang="en" />
-          </Helmet>
+          <SEO query={data} />
           <div className={`body ${loading}`}>
             <div id="wrapper">
-              <Header isHomePage={isHomePage} timeout={false} />
+              <Header menuLinks={data.site.siteMetadata.menuLinks} isHomePage={isHomePage} timeout={false} />
                 <div className='content'>
                   {children}
                 </div>
