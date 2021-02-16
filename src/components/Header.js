@@ -8,15 +8,12 @@ const Header = props => (
     <Icon icon='paint-brush' />
     <nav>
       <ul>
-        <li>
-          <Link to="/"><button>За мен</button></Link>
-        </li>
-        <li>
-          <Link to="/work"><button>Картини</button></Link>
-        </li>
-        <li>
-          <Link to="/contact"><button>Контакти</button></Link>
-        </li>
+      {props.menuLinks.map((menuLink) => (
+          <li key={menuLink.name}>
+            <Link to={menuLink.link}><button>{menuLink.name}</button></Link>
+          </li>
+        )
+      )}
       </ul>
     </nav>
   </header>
