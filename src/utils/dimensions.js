@@ -33,7 +33,7 @@ class Dimensions {
     if (this.is.small) return this.small
     if (this.is.xsmall) return this.xsmall
     if (this.is.xxsmall) return this.xxsmall
-    if (this.is.xxxsmall) return this.xxxsmall
+    return this.xxxsmall
   }
 
   get is () {

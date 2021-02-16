@@ -368,7 +368,7 @@ const Home = ({location}) => {
             <div className='filters'>
             {renderFilters()}
             </div>
-            <ImageList images={filterParam !== 'none' && filters[filterParam] ? images.filter(filters[filterParam].rule) : images} imageSize={imageSizes[Dimensions.current]} />
+            <ImageList images={filterParam !== 'none' && filters[filterParam] ? images.filter(filters[filterParam].rule) : images} imageSize={typeof window !== 'undefined' ? imageSizes[Dimensions.current] : 301} />
         </Layout>
     )
 }
