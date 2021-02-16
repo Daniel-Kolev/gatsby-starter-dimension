@@ -335,7 +335,7 @@ const Home = ({location}) => {
     const filters = {
       'none': { value: 'Всички'},
       'forSale': { rule: (image) => isImageForSale(image), value: "За Продажба" },
-      'others': { rule: (image) => !isImageForSale(image), value: "Други" }
+      'others': { rule: (image) => !isImageForSale(image), value: "Галерия" }
     }
     const filterNames = Object.keys(filters)
     const imageSizes = {

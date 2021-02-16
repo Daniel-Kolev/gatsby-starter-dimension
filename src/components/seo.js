@@ -2,8 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
+import * as queryString from "query-string";
+
 const SEO = ({ query: { site } = {}, title, description, image }) => {
-  const { pathname } = useLocation()
+  const { pathname, search } = useLocation()
+  const { filter: filterParam } = queryString.parse(search);
 
   const {
     defaultTitle,
@@ -15,12 +18,13 @@ const SEO = ({ query: { site } = {}, title, description, image }) => {
   } = site.siteMetadata
   const currentPageInfo = menuLinks.find((route) => route.link === pathname)
   const seo = {
-    title: title ?? currentPageInfo?.name ?? defaultTitle,
+    title: title ?? currentPageInfo?.title ?? defaultTitle,
     description: description ?? currentPageInfo?.description ?? defaultDescription,
     image: `${siteUrl}${image ?? defaultImage}`,
     url: `${siteUrl}${pathname}`,
     keywords: defaultKeywords
   }
+  const noIndex = filterParam
   return (
     <Helmet title={seo.title}>
       <html lang="bg" />
@@ -40,6 +44,7 @@ const SEO = ({ query: { site } = {}, title, description, image }) => {
         <meta name="twitter:description" content={seo.description} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {noIndex && <meta name="robots" content="noindex" />}
     </Helmet>
   )
 }
