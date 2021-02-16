@@ -11,7 +11,8 @@
     // border-color: _palette(border);
     // border-top-width: _size(border-width);
     // border-bottom-width: _size(border-width);
-    max-width: 100%;
+    max-width: 936px;
+    margin: auto;
 
     .inner {
       @include vendor(
@@ -39,7 +40,7 @@
     p {
       text-transform: uppercase;
       letter-spacing: _font(letter-spacing);
-      font-size: 0.8rem;
+      font-size: 1rem;
       line-height: 2;
     }
   }

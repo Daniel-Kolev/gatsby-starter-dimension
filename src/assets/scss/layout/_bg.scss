@@ -61,9 +61,9 @@
     z-index: 1;
   }
 
-  @include breakpoint(xsmall) {
+  @include breakpoint(medium) {
     &:after {
-      background-position: 44%;;
+      background-position: 100%;
     }
   }
   

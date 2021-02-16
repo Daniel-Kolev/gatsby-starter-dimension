@@ -3,8 +3,8 @@ import Layout from '../components/layout'
 
 const NotFoundPage = (props) => (
   <Layout location={props.location}>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <h1>Страницата не бе намерена</h1>
+    <p>Върнете се обратно или навигирайте към една от страницте от менюто.</p>
   </Layout>
 )
 
