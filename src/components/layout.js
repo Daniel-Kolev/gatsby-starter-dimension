@@ -46,6 +46,7 @@ const Layout = ({ children, isHomePage = false, location }) => {
               menuLinks {
                 name
                 link
+                keywords
               }
             }
           }
