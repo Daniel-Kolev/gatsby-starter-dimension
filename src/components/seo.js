@@ -22,7 +22,7 @@ const SEO = ({ query: { site } = {}, title, description, image }) => {
     description: description ?? currentPageInfo?.description ?? defaultDescription,
     image: `${siteUrl}${image ?? defaultImage}`,
     url: `${siteUrl}${pathname}`,
-    keywords: defaultKeywords
+    keywords: currentPageInfo?.keywords ?? defaultKeywords
   }
   const noIndex = filterParam
   return (
