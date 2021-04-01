@@ -8,19 +8,6 @@ import { Link } from 'gatsby'
 const Home = ({location}) => {
     const [images, setImages] = useState([
       {
-          "media_url": "https://scontent-sof1-1.cdninstagram.com/v/t51.29350-15/152953705_2802507546638548_1645699164568303097_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=qfD-841bUZkAX_flVUF&_nc_ht=scontent-sof1-1.cdninstagram.com&oh=d5f2fdb3d43187ed691fa5419933a0fd&oe=608C9665",
-          "permalink": "https://www.instagram.com/p/CLtdxzTlP8-/",
-          "caption": "😊😊😊",
-          "media_type": "IMAGE",
-          "id": "17886761597009534"
-      },
-      {
-          "media_url": "https://video-sof1-1.cdninstagram.com/v/t50.2886-16/143488895_426025765306962_5479782825493452580_n.mp4?_nc_cat=101&vs=17868268655257324_2252882363&_nc_vs=HBksFQAYJEdIOTNqUWhTQW1qYWQ0TUJBQ1RYMGxkeUdReE1ia1lMQUFBRhUAAsgBABUAGCRHQmVJbndnRWdQSlV3VnNBQUQ3VGswRnpuOThmYmtZTEFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbYoY63j8a9PxUCKAJDMywXQBjul41P3zsYEmRhc2hfYmFzZWxpbmVfMl92MREAdeoHAA%3D%3D&ccb=1-3&_nc_sid=59939d&efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5mZWVkIn0%3D&_nc_ohc=3I2IQDrf2RgAX8-lc66&_nc_ht=video-sof1-1.cdninstagram.com&oh=a530cccf94c432766c1da6a909172355&oe=608B37A7&_nc_rid=27b9e3ad5b",
-          "permalink": "https://www.instagram.com/p/CKzTN0-JiQP/",
-          "media_type": "VIDEO",
-          "id": "18065246638267852"
-      },
-      {
           "media_url": "https://scontent-sof1-1.cdninstagram.com/v/t51.29350-15/140378842_203492781485375_2323413002929044257_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=Oi6EZi_x-s8AX-7cSF1&_nc_ht=scontent-sof1-1.cdninstagram.com&oh=3ebb22cb227af13fb2b56e317271d4e1&oe=608AAD03",
           "permalink": "https://www.instagram.com/p/CKRFYmuFa-U/",
           "caption": "Продава се!\n~\nРазмери на картината: 30х40 см.\nРисувана с: черна темперна боя",
