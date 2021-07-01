@@ -15,12 +15,6 @@ const Home = ({location}) => {
             "id": "17886761597009534"
         },
         {
-            "media_url": "https://video.cdninstagram.com/v/t50.2886-16/143488895_426025765306962_5479782825493452580_n.mp4?_nc_cat=101&vs=17868268655257324_2252882363&_nc_vs=HBksFQAYJEdIOTNqUWhTQW1qYWQ0TUJBQ1RYMGxkeUdReE1ia1lMQUFBRhUAAsgBABUAGCRHQmVJbndnRWdQSlV3VnNBQUQ3VGswRnpuOThmYmtZTEFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbYoY63j8a9PxUCKAJDMywXQBjul41P3zsYEmRhc2hfYmFzZWxpbmVfMl92MREAdeoHAA%3D%3D&ccb=1-3&_nc_sid=59939d&efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5mZWVkIn0%3D&_nc_ohc=1_P-G3CoHvgAX8Kyp9C&_nc_ht=video.cdninstagram.com&oh=4ea2d206f47e1fd86e48189d7c591d94&oe=60DDD5A7&_nc_rid=21fc7cac57",
-            "permalink": "https://www.instagram.com/p/CKzTN0-JiQP/",
-            "media_type": "VIDEO",
-            "id": "18065246638267852"
-        },
-        {
             "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/140378842_203492781485375_2323413002929044257_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=WvpLJCY1ZqEAX-7BjKu&_nc_ht=scontent.cdninstagram.com&oh=040fe1c260efae36191c54ad12eeec03&oe=60E1B003",
             "permalink": "https://www.instagram.com/p/CKRFYmuFa-U/",
             "caption": "Продава се!\n~\nРазмери на картината: 30х40 см.\nРисувана с: черна темперна боя",
