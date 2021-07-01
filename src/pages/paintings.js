@@ -8,13 +8,6 @@ import { Link } from 'gatsby'
 const Home = ({location}) => {
     const [images, setImages] = useState([
         {
-            "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/152953705_2802507546638548_1645699164568303097_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=kBHByLyCUaIAX84yHc8&_nc_ht=scontent.cdninstagram.com&oh=001457c091869b846a608d22ed765e11&oe=60E19F25",
-            "permalink": "https://www.instagram.com/p/CLtdxzTlP8-/",
-            "caption": "😊😊😊",
-            "media_type": "IMAGE",
-            "id": "17886761597009534"
-        },
-        {
             "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/140378842_203492781485375_2323413002929044257_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=WvpLJCY1ZqEAX-7BjKu&_nc_ht=scontent.cdninstagram.com&oh=040fe1c260efae36191c54ad12eeec03&oe=60E1B003",
             "permalink": "https://www.instagram.com/p/CKRFYmuFa-U/",
             "caption": "Продава се!\n~\nРазмери на картината: 30х40 см.\nРисувана с: черна темперна боя",
